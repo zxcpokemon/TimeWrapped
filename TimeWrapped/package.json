@@ -1,0 +1,13 @@
+{
+  "name": "timewrapped",
+  "version": "0.3.0",
+  "private": true,
+  "description": "Private, event-driven screen time for Windows",
+  "scripts": {
+    "dev": "tauri dev",
+    "build": "tauri build --bundles nsis",
+    "check": "node --check src/app.js",
+    "tauri": "tauri"
+  },
+  "devDependencies": { "@tauri-apps/cli": "^2.10.0" }
+}
