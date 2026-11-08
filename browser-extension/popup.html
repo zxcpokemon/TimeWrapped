@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TimeWrapped</title><link rel="stylesheet" href="options.css"><script type="module" src="options.js"></script></head>
+<body class="popup"><main>
+<header><img src="icon.png" alt="" width="34" height="34"><div><strong>TimeWrapped</strong><small>Сайты и музыка · 1.1.0</small></div><button id="settings" class="quiet" title="Открыть в отдельной вкладке" aria-label="Открыть настройки">↗</button></header>
+<label class="language-picker"><span>Язык</span><select id="language" aria-label="Язык интерфейса"><option value="ru">Русский</option><option value="en">English</option><option value="uk">Українська</option></select></label><div id="connection" class="connection" role="status">Проверяем подключение…</div>
+<form id="pair"><label for="token">Код из приложения → Расширения → Браузер</label><div class="pair"><input id="token" type="password" autocomplete="off" spellcheck="false" placeholder="Вставьте код подключения" required pattern="[a-f0-9]{64}" maxlength="64"><button id="connect">Подключить</button></div></form>
+<section aria-label="Возможности дополнения">
+<label class="feature"><span><strong>История сайтов</strong><small>Только вкладка на экране с фокусом</small></span><input id="sites_history" type="checkbox" disabled></label>
+<label class="feature"><span><strong>SoundCloud</strong><small>Треки и время воспроизведения</small></span><input id="soundcloud" type="checkbox" disabled></label>
+<label class="feature"><span><strong>Spotify на компьютере</strong><small>История треков настольного плеера</small></span><input id="spotify_titles" type="checkbox" disabled></label>
+<details><summary>Подробности истории</summary>
+<label class="feature"><span><strong>Названия и пути страниц</strong><small>По умолчанию записываются только домены</small></span><input id="site_details" type="checkbox" disabled></label>
+<label class="feature"><span><strong>Отдельная статистика 18+</strong><small>Личный раздел и итоги в приложении</small></span><input id="adult_stats" type="checkbox" disabled></label>
+<p>Инкогнито и старая история не собираются. Пароли, служебные параметры URL и содержимое страниц не передаются. Для YouTube сохраняется ID видео. Списки исключений находятся в приложении.</p></details>
+</section><button id="pause" class="wide quiet" disabled>Приостановить сбор в браузере</button><p id="status" role="status"></p>
+<footer>Одно дополнение для всех функций. Только ваш ПК, без аккаунта и облака. Chrome / Edge.</footer>
+</main></body></html>

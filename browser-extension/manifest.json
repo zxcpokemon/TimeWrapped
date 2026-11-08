@@ -1,0 +1,52 @@
+{
+  "manifest_version": 3,
+  "name": "TimeWrapped",
+  "version": "1.1.0",
+  "description": "Одно дополнение: активные сайты, SoundCloud и настройки музыки. Данные остаются на вашем ПК.",
+  "permissions": [
+    "storage",
+    "scripting",
+    "alarms"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:38671/*",
+    "https://soundcloud.com/*",
+    "https://www.soundcloud.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://soundcloud.com/*",
+        "https://www.soundcloud.com/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "action": {
+    "default_title": "TimeWrapped — сайты и музыка",
+    "default_popup": "popup.html"
+  },
+  "optional_permissions": [
+    "tabs"
+  ],
+  "optional_host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "incognito": "not_allowed",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApwiuCEVj6+U9pewYx2Z9K3mdVlfkJuFdJHsTrNqwTqNW0mKD7CXyCo8lusig93893h5cxBC6FzmxETDKf69AsmsEE5j9nHtLWRyAiRl3sTNeEqZ8v6Du8L3C2E8lHsvOr5JqgcICBNSUCHVYSeVmV/l4z2YqLoKc9qb+UwWRCorCutldlSwyd/IvvFC2y7bjXyqWrJMaAP5PEXgRDc6z7Yg3+6O1bEgDURGVb1MbyCYet4m7PTFzC0JtbaZlUstKbhWypl0pGBdK/kJq07NqE3r1+bAMBvTYXYyQBr0bimsnosLq4XNw9oZohSC/SpWiA6RwukNsRvOSsrReSdu7CQIDAQAB",
+  "icons": {
+    "128": "icon.png"
+  },
+  "minimum_chrome_version": "120"
+}
